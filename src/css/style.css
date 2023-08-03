@@ -50,6 +50,42 @@ body{
     border-radius: 5px;
 }
 
+/* Loading efect */
+#loading-div{
+    height: 50px;
+    width: 50px;
+    margin: 25px auto;
+
+    transition: .5;
+}
+
+#load-effect{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 100%;
+
+    animation: .5s loading infinite;
+}
+
+@keyframes loading{
+    0%{
+        box-shadow: 0 0 0 0 #fff;
+    }
+    100%{
+        box-shadow: 0 0 0 20px #ffffff61;
+    }
+}
+
+/* Error div */
+#error-div{
+    border-top: solid 2px #fff;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Weather */
 #weather-data{
     border-top: solid 2px #fff;
@@ -77,6 +113,11 @@ body{
     height: 35px;
 }
 
+#description{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 #description-container{
     display: flex;
     justify-content: center;
@@ -90,7 +131,7 @@ body{
     align-items: center;
 }
 
-#details-container #umidity{
+#details-container #humidity{
     border-right: 1px solid #fff;
     margin: 10px;
     padding: 10px;
